@@ -1,24 +1,35 @@
-# README
+# TrelloClone
+TrelloClone is a clone of Trello built in Vue.js and Ruby on Rails. 
+## Built With
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Vue.js
+- Ruby on Rails
+## Getting Started
 
-Things you may want to cover:
+Run `git clone https://github.com/koomekevo/TrelloClone.git` into your local computer
 
-* Ruby version
+Run `cd TrelloClone` to change to project folder
 
-* System dependencies
+Run `bundle install` then `rails db:setup`.
 
-* Configuration
+Run `rails s` to run the app.
+## Authors
 
-* Database creation
+👤 **Kevin Koome**
 
-* Database initialization
+- GitHub: [@koomekevo](https://github.com/koomekevo)
+- Twitter: [@koomekevo](https://twitter.com/koomekevo)
+- LinkedIn: [LinkedIn](https://ke.linkedin.com/in/kevin-koome-aab84186)
+## 🤝 Contributing
 
-* How to run the test suite
+Contributions, issues, and feature requests are welcome!
 
-* Services (job queues, cache servers, search engines, etc.)
+Feel free to check the [issues page](../../issues/).
 
-* Deployment instructions
+## Show your support
 
-* ...
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
