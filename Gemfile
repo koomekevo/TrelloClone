@@ -30,9 +30,6 @@ gem "jbuilder"
 # Allows us to use sorting for the position
 gem "acts_as_list"
 
-# Add Rubocop linter
-gem "rubocop", ">= 1.0", "< 2.0"
-
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
