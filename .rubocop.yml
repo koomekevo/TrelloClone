@@ -59,3 +59,5 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
+inherit_gem:
+  rubocop-discourse: default.yml
