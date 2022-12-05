@@ -1,5 +1,6 @@
-# -*- encoding: utf-8 -*-
-$LOAD_PATH.push File.expand_path("../lib", __FILE__)
+# frozen_string_literal: true
+
+$LOAD_PATH.push File.expand_path("lib", __dir__)
 require "public_suffix/version"
 
 Gem::Specification.new do |s|
@@ -18,12 +19,12 @@ Gem::Specification.new do |s|
     "documentation_uri" => "https://rubydoc.info/gems/#{s.name}/#{s.version}",
     "homepage_uri" => s.homepage,
     "source_code_uri" => "https://github.com/weppos/publicsuffix-ruby/tree/v#{s.version}",
+    "rubygems_mfa_required" => "true",
   }
 
   s.required_ruby_version = ">= 2.6"
 
   s.require_paths    = ["lib"]
   s.files            = `git ls-files`.split("\n")
-  s.test_files       = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.extra_rdoc_files = %w( LICENSE.txt )
+  s.extra_rdoc_files = %w[LICENSE.txt]
 end

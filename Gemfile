@@ -36,6 +36,9 @@ gem "rubocop"
 # Install Rubocop Discourse
 gem "rubocop-discourse"
 
+# Install Rubocop Rails
+gem 'rubocop-rails', '~> 2.17', '>= 2.17.3'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

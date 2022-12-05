@@ -21,7 +21,7 @@ def apply_spec_defaults(s)
   s.require_path = 'lib'
   s.license = 'MIT'
 
-  s.add_development_dependency("rspec","~>3.6")
+  s.add_development_dependency("rspec", "~>3.6")
   s.add_development_dependency("rake", "~>0.9")
   s.homepage = "http://banisterfiend.wordpress.com"
   s.has_rdoc = 'yard'
@@ -35,16 +35,16 @@ RSpec::Core::RakeTask.new(:spec) do |t|
 end
 
 desc "reinstall gem"
-task :reinstall => :gems do
+task reinstall: :gems do
   sh "gem uninstall method_source" rescue nil
   sh "gem install #{direc}/pkg/method_source-#{MethodSource::VERSION}.gem"
 end
 
 desc "Set up and run tests"
-task :default => [:spec]
+task default: [:spec]
 
 desc "Build the gemspec file"
-task :gemspec => "ruby:gemspec"
+task gemspec: "ruby:gemspec"
 
 namespace :ruby do
   spec = Gem::Specification.new do |s|
@@ -57,7 +57,7 @@ namespace :ruby do
     pkg.need_tar = false
   end
 
-  desc  "Generate gemspec file"
+  desc "Generate gemspec file"
   task :gemspec do
     File.open("#{spec.name}.gemspec", "w") do |f|
       f << spec.to_ruby
@@ -66,13 +66,13 @@ namespace :ruby do
 end
 
 desc "build all platform gems at once"
-task :gems => [:rmgems, "ruby:gem"]
+task gems: [:rmgems, "ruby:gem"]
 
 desc "remove all platform gems"
-task :rmgems => ["ruby:clobber_package"]
+task rmgems: ["ruby:clobber_package"]
 
 desc "build and push latest gems"
-task :pushgems => :gems do
+task pushgems: :gems do
   chdir("#{direc}/pkg") do
     Dir["*.gem"].each do |gemfile|
       sh "gem push #{gemfile}"

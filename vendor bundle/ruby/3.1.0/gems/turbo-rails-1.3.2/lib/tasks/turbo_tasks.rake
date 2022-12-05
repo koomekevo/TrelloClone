@@ -4,7 +4,7 @@ end
 
 def redis_installed?
   Gem.win_platform? ?
-    system('where redis-server > NUL 2>&1') : 
+    system('where redis-server > NUL 2>&1') :
     system('which redis-server > /dev/null')
 end
 

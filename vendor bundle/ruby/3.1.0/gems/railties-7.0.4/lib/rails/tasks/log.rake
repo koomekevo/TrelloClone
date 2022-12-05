@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 namespace :log do
   ##
   # Truncates all/specified log files
@@ -26,8 +24,8 @@ namespace :log do
 
   def log_files_to_truncate(envs)
     envs.split(",")
-        .map    { |file| "log/#{file.strip}.log" }
-        .select { |file| File.exist?(file) }
+      .map { |file| "log/#{file.strip}.log" }
+      .select { |file| File.exist?(file) }
   end
 
   def clear_log_file(file)

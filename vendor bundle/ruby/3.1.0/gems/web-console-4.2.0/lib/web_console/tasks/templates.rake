@@ -1,15 +1,13 @@
-# frozen_string_literal: true
-
 namespace :templates do
   desc "Run tests for templates"
   task test: [ :daemonize, :npm, :rackup, :wait, :mocha, :kill, :exit ]
   task serve: [ :npm, :rackup ]
 
   workdir = Pathname(EXPANDED_CWD).join("test/templates")
-  pid     = Pathname(Dir.tmpdir).join("web_console_test.pid")
-  runner  = URI.parse("http://#{ENV['IP'] || '127.0.0.1'}:#{ENV['PORT'] || 29292}/html/test_runner.html")
-  rackup  = "rackup --host #{runner.host} --port #{runner.port}"
-  result  = nil
+  pid = Pathname(Dir.tmpdir).join("web_console_test.pid")
+  runner = URI.parse("http://#{ENV['IP'] || '127.0.0.1'}:#{ENV['PORT'] || 29292}/html/test_runner.html")
+  rackup = "rackup --host #{runner.host} --port #{runner.port}"
+  result = nil
   browser = "phantomjs"
 
   def need_to_wait?(uri)

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 eager_load = ->() do
   puts "Hold on, I am eager loading the application."
   Zeitwerk::Loader.eager_load_all

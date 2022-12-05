@@ -14,4 +14,4 @@ task :sync_tool do
   FileUtils.cp "../ruby/tool/lib/find_executable.rb", "./test/lib"
 end
 
-task :default => :test
+task default: :test

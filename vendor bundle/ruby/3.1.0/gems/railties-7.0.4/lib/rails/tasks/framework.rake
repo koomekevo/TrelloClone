@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 namespace :app do
   desc "Update configs and some other initially generated files (or use just update:configs or update:bin)"
   task update: [ "update:configs", "update:bin", "update:db", "update:active_storage", "update:upgrade_guide_info" ]
@@ -21,7 +19,7 @@ namespace :app do
       generators_lib = File.expand_path("../generators", __dir__)
       project_templates = "#{Rails.root}/lib/templates"
 
-      default_templates = { "erb"   => %w{controller mailer scaffold},
+      default_templates = { "erb" => %w{controller mailer scaffold},
                             "rails" => %w{controller helper scaffold_controller} }
 
       default_templates.each do |type, names|

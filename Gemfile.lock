@@ -185,6 +185,10 @@ GEM
     rubocop-discourse (3.0)
       rubocop (>= 1.1.0)
       rubocop-rspec (>= 2.0.0)
+    rubocop-rails (2.17.3)
+      activesupport (>= 4.2.0)
+      rack (>= 1.1)
+      rubocop (>= 1.33.0, < 2.0)
     rubocop-rspec (2.15.0)
       rubocop (~> 1.33)
     ruby-progressbar (1.11.0)
@@ -244,6 +248,7 @@ DEPENDENCIES
   rails (~> 7.0.3, >= 7.0.3.1)
   rubocop
   rubocop-discourse
+  rubocop-rails (~> 2.17, >= 2.17.3)
   selenium-webdriver
   sprockets-rails
   stimulus-rails

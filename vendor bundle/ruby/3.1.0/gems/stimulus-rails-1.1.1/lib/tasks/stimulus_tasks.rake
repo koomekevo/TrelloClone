@@ -1,6 +1,8 @@
 require "stimulus/manifest"
 
-def run_stimulus_install_template(path) system "#{RbConfig.ruby} ./bin/rails app:template LOCATION=#{File.expand_path("../install/#{path}.rb",  __dir__)}" end
+def run_stimulus_install_template(path)
+  system "#{RbConfig.ruby} ./bin/rails app:template LOCATION=#{File.expand_path("../install/#{path}.rb", __dir__)}"
+end
 
 namespace :stimulus do
   desc "Install Stimulus into the app"
