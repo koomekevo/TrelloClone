@@ -7,7 +7,7 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
-    - "gemfiles/vendor/bundle/**/*"
+    - "vendor bundle/**/*.rb" # or vendor/bundle/**/*
 
   DisplayCopNames: true
 
@@ -26,7 +26,7 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  AllowedMethods: ['describe']
+  IgnoredMethods: ['describe']
   Max: 30
 
 Style/Documentation:
