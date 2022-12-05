@@ -33,6 +33,9 @@ gem "acts_as_list"
 # Install Rubocop
 gem "rubocop"
 
+# Install Rubocop Discourse
+gem "rubocop-discourse"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
