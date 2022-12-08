@@ -1,18 +1,17 @@
-# frozen_string_literal: true
 # -*- encoding: utf-8 -*-
 
 require_relative 'lib/pg/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "pg"
-  spec.version       = PG::VERSION
-  spec.authors       = ["Michael Granger", "Lars Kanis"]
-  spec.email         = ["ged@FaerieMUD.org", "lars@greiz-reinsdorf.de"]
+  spec.name = "pg"
+  spec.version = PG::VERSION
+  spec.authors = ["Michael Granger", "Lars Kanis"]
+  spec.email = ["ged@FaerieMUD.org", "lars@greiz-reinsdorf.de"]
 
-  spec.summary       = "Pg is the Ruby interface to the PostgreSQL RDBMS"
-  spec.description   = "Pg is the Ruby interface to the PostgreSQL RDBMS. It works with PostgreSQL 9.3 and later."
-  spec.homepage      = "https://github.com/ged/ruby-pg"
-  spec.license       = "BSD-2-Clause"
+  spec.summary = "Pg is the Ruby interface to the PostgreSQL RDBMS"
+  spec.description = "Pg is the Ruby interface to the PostgreSQL RDBMS. It works with PostgreSQL 9.3 and later."
+  spec.homepage = "https://github.com/ged/ruby-pg"
+  spec.license = "BSD-2-Clause"
   spec.required_ruby_version = ">= 2.5"
 
   spec.metadata["homepage_uri"] = spec.homepage
@@ -25,8 +24,8 @@ Gem::Specification.new do |spec|
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{\A(?:test|spec|features)/}) }
   end
-  spec.extensions    = ["ext/extconf.rb"]
+  spec.extensions = ["ext/extconf.rb"]
   spec.require_paths = ["lib"]
-  spec.cert_chain    = ["certs/ged.pem"]
-  spec.rdoc_options  = ["--main", "README.rdoc"]
+  spec.cert_chain = ["certs/ged.pem"]
+  spec.rdoc_options = ["--main", "README.rdoc"]
 end

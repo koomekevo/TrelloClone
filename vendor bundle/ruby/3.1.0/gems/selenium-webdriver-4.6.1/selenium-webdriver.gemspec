@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 root = File.expand_path(File.dirname(__FILE__))
 raise "cwd must be #{root} when reading gemspec" if root != Dir.pwd
 

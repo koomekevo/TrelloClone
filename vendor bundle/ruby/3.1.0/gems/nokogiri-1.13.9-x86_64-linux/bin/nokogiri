@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
-
 require "optparse"
 require "open-uri"
 require "uri"
@@ -35,7 +33,7 @@ module Nokogiri
       attr_accessor :rcfile
     end
 
-    self.rcfile  = File.expand_path("~/.nokogirirc")
+    self.rcfile = File.expand_path("~/.nokogirirc")
     self.console = :IRB
   end
 end

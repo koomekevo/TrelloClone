@@ -27,6 +27,18 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Allows us to use sorting for the position
+gem "acts_as_list"
+
+# Install Rubocop
+gem "rubocop"
+
+# Install Rubocop Discourse
+gem "rubocop-discourse"
+
+# Install Rubocop Rails
+gem 'rubocop-rails', '~> 2.17', '>= 2.17.3'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

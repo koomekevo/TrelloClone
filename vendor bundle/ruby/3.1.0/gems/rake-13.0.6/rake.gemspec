@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 require_relative 'lib/rake/version'
 
 Gem::Specification.new do |s|
@@ -23,10 +22,10 @@ Rake has the following features:
   s.licenses = ["MIT".freeze]
 
   s.metadata = {
-    "bug_tracker_uri"   => "https://github.com/ruby/rake/issues",
-    "changelog_uri"     => "https://github.com/ruby/rake/blob/v#{s.version}/History.rdoc",
+    "bug_tracker_uri" => "https://github.com/ruby/rake/issues",
+    "changelog_uri" => "https://github.com/ruby/rake/blob/v#{s.version}/History.rdoc",
     "documentation_uri" => "https://ruby.github.io/rake",
-    "source_code_uri"   => "https://github.com/ruby/rake/tree/v#{s.version}",
+    "source_code_uri" => "https://github.com/ruby/rake/tree/v#{s.version}",
   }
 
   s.files = [

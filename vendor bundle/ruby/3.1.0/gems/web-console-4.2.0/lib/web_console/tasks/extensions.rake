@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 namespace :ext do
   rootdir = Pathname("extensions")
 
@@ -7,7 +5,7 @@ namespace :ext do
   task chrome: "chrome:build"
 
   namespace :chrome do
-    dist   = Pathname("dist/crx")
+    dist = Pathname("dist/crx")
     extdir = rootdir.join(dist)
     manifest_json = rootdir.join("chrome/manifest.json")
 
@@ -48,9 +46,9 @@ namespace :ext do
 
   namespace :lib do
     templates = Pathname("lib/web_console/templates")
-    tmplib    = rootdir.join("tmp/lib/")
-    js_erb    = FileList.new(templates.join("**/*.js.erb"))
-    dirs      = js_erb.pathmap("%{^#{templates},#{tmplib}}d")
+    tmplib = rootdir.join("tmp/lib/")
+    js_erb = FileList.new(templates.join("**/*.js.erb"))
+    dirs = js_erb.pathmap("%{^#{templates},#{tmplib}}d")
 
     task templates: dirs + js_erb.pathmap("%{^#{templates},#{tmplib}}X")
 
