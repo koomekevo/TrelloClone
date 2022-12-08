@@ -2,12 +2,10 @@
 
 <h1>Lists</h1>
 
-<div id="lists">
+<div class="row">
   <% @lists.each do |list| %>
-    <%= render list %>
-    <p>
-      <%= link_to "Show this list", list %>
-    </p>
+    <div class="col-3">
+      <h5><%= list.name %></h5>
   <% end %>
 </div>
 
